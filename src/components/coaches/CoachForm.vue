@@ -55,7 +55,8 @@ export default {
                 rate: this.rate,
                 areas: this.areas
             };
-            console.log(formData);
+            this.$store.dispatch('coaches/addCoach', formData);
+            this.$router.push('/coaches');
         }
     }
 }
